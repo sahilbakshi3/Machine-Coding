@@ -62,3 +62,72 @@ const MemoryGame = () => {
 };
 
 export default MemoryGame;
+
+/* -------------------------------------------------------------------
+   MEMORY GAME
+   -------------------------------------------------------------------
+   GOAL:
+     Simple flip-to-match memory game with 18 pairs (36 cards)
+     - Click to flip 2 cards
+     - If match → stay flipped
+     - If not → flip back after delay
+
+   -------------------------------------------------------------------
+   DATA GENERATION (generateGrid):
+     1. Create array [1..18]
+     2. Duplicate it → total 36 items
+     3. Shuffle using sort(Math.random() - 0.5)
+     4. Map → card objects:
+          {
+            id: index,
+            number: item,      // card value
+            isFlipped: false   // hidden initially
+          }
+
+   -------------------------------------------------------------------
+   STATE:
+     cards         → full card list (with flip states)
+     isLock        → disables clicks while 2 cards are being checked
+     flippedCard   → stores ids of the last 2 flipped cards
+
+   -------------------------------------------------------------------
+   HANDLE CLICK:
+     conditions:
+       - Ignore if card already flipped
+       - Ignore if isLock is true (during evaluation)
+
+     process:
+       - Set clicked card's isFlipped = true
+       - Add its index to flippedCard array
+
+   -------------------------------------------------------------------
+   MATCH CHECK (useEffect on flippedCard change):
+     When exactly 2 cards are flipped:
+       1. Lock board (setIsLock(true))
+       2. After 3 seconds:
+            - If mismatch → flip both back
+            - If match → keep them flipped
+            - Reset flippedCard to empty
+            - Unlock board (setIsLock(false))
+
+   -------------------------------------------------------------------
+   RENDER:
+     Loop through cards → 36 <button> elements
+     - Show number if flipped, otherwise "?"
+     - onClick triggers handleClick(id)
+
+   -------------------------------------------------------------------
+   FLOW SUMMARY:
+     Click card → flips + tracked
+     When 2 cards flipped → lock → check match
+     mismatch → flip back
+     match → leave visible
+     unlock → continue playing
+
+   -------------------------------------------------------------------
+   POTENTIAL IMPROVEMENTS:
+     ✓ Disable clicking same card twice
+     ✓ Track score or moves
+     ✓ Win detection when all cards flipped
+
+------------------------------------------------------------------- */
