@@ -51,3 +51,29 @@ const App = () => {
 };
 
 export default App;
+
+//////////////////// REACT DUAL SLIDER LOGIC — CHEAT SHEET ////////////////////
+
+// Goal:
+// Two sliders that share a TOTAL points limit (100)
+// Changing one slider automatically adjusts the other so their sum always = TOTAL
+
+// Key Ideas:
+// 1. Manage two states: a, b (values for each slider)
+// 2. TOTAL = 100 (fixed sum)
+// 3. When slider A changes: update A directly, then compute B = TOTAL - A
+// 4. When slider B changes: update B directly, then compute A = TOTAL - B
+// 5. Sliders are controlled components (state driven values)
+// 6. Derived state: one value always depends on the other
+// 7. Remaining points = TOTAL - (a + b), should always be 0 if logic is correct
+
+// Functions:
+// handleA: Parse slider input, update A, adjust B
+// handleB: Parse slider input, update B, adjust A
+
+// Interview Talking Point:
+// This approach enforces valid state at all times,
+// prevents overshooting the limit,
+// and keeps user input tightly synchronized between two components.
+
+///////////////////////////////////////////////////////////////////////////////
