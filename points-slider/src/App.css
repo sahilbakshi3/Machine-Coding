@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.container {
+  width: 20rem;
+  border: 1px solid black;
+  margin: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.25rem;
+  border-radius: 10px;
+}
+
+.row {
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+p {
+  text-decoration: underline;
+}
+
+h2 {
+  font-weight: bold;
+}
