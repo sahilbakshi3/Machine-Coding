@@ -116,7 +116,6 @@
 //   },
 // ];
 
-
 // function flatMenu(items, res = []){
 //     for(const item of items){
 //         res.push(item.name);
@@ -130,4 +129,18 @@
 
 // console.log(flatMenu(data));
 
-const movements = [200, 450, -400, 3000, ]
+// var x = 100;
+
+// {
+//   var x = 500;
+// }
+
+// let a = x;
+
+// {
+//   let a = 1000;
+// }
+
+// console.log(a);
+
+
