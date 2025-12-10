@@ -143,4 +143,31 @@
 
 // console.log(a);
 
+function computeAmount() {
+  let total = 0;
 
+  const api = {
+    lacs(n) {
+      total += n * 100000;
+      return api;
+    },
+    crore(n) {
+      total += n * 10000000;
+      return api;
+    },
+    thousand(n) {
+      total += n * 1000;
+      return api;
+    },
+
+    value() {
+      return total;
+    },
+  };
+
+  return api;
+}
+
+console.log(
+  computeAmount().lacs(15).crore(5).lacs(20).thousand(45).crore(7).value()
+);
