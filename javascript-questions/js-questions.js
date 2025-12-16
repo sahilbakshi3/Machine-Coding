@@ -92,7 +92,23 @@
 // console.log(removeLastElement([1, 2, 3, 4, 5]));
 
 // Given [5, 10, 15, 20], check if any number is greater than 18.
+
+// function checkNumber(arr) {
+//   const check = arr.some((item) => item > 18);
+//   return check;
+// }
+
+// console.log(checkNumber([5, 10, 15, 20]));
+
 // Given [2, 4, 6, 8, 10], check if all numbers are less than 15.
+
+// function checkNumber(arr) {
+//   const check = arr.every((item) => item < 15);
+//   return check;
+// }
+
+// console.log(checkNumber([2, 4, 6, 8, 10]));
+
 // Given [1, 2, 3, 4, 5], return true if the array contains the number 3.
 
 // function checkElement(arr) {
@@ -112,10 +128,40 @@
 // console.log(checkIndex(["red", "blue", "green"]));
 
 // Given [10, 20, 30, 40, 50], return the element at index 2.
+
+// function index(arr) {
+//   return arr[2];
+// }
+
+// console.log(index([10, 20, 30, 40, 50]));
+
 // Given [100, 200, 300], add the number 400 to the end.
+
+// function addNumber(arr) {
+//   return [...arr, 400];
+// }
+
+// console.log(addNumber([100, 200, 300]));
+
 // Given [2, 4, 6], add the number 0 to the beginning.
+
+// function addNumber(arr) {
+//   return [0, ...arr];
+// }
+
+// console.log(addNumber([2, 4, 6]));
+
 // Given [5, 10, 15, 20, 25], create a new array with elements from index 1 to 3.
+
+// function newArray(arr) {
+//   const res = arr.slice(1, 4);
+//   return res;
+// }
+
+// console.log(newArray([5, 10, 15, 20, 25]));
+
 // Given [1, 2, 3, 4, 5], return the array in reverse order without modifying the original.
+
 // const arr = [1, 2, 3, 4, 5];
 
 // function reverse(arr) {
@@ -135,28 +181,206 @@
 
 // console.log(upper(["a", "b", "c"]));
 
+{
+  /*----------------------------------------------------------------------------------------- */
+}
+
 // Filtering & Searching (21-40)
 
 // Given [12, 5, 8, 130, 44], return all numbers greater than 10.
+
+// function greaterThan10(arr) {
+//   const res = arr.filter((n) => n > 10);
+//   return res;
+// }
+
+// console.log(greaterThan10([12, 5, 8, 130, 44]));
+
 // Given ['apple', 'apricot', 'banana', 'avocado'], return words starting with 'a'.
+
+// function stastrWithA(arr) {
+//   const res = arr.filter((item) => item.startsWith("a"));
+//   return res;
+// }
+
+// console.log(stastrWithA(["apple", "apricot", "banana", "avocado"]));
+
 // Given [1, 2, 3, 4, 5, 6, 7, 8, 9], return only odd numbers.
+
+// function oddNumbers(arr) {
+//   const res = arr.filter((n) => n % 2);
+//   return res;
+// }
+
+// console.log(oddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
 // Given [-3, -1, 0, 2, 5], return only positive numbers.
+
+// function positiveNumbers(arr) {
+//   const res = arr.filter((n) => n > 0);
+//   return res;
+// }
+
+// console.log(positiveNumbers([-3, -1, 0, 2, 5]));
+
 // Given ['', 'hello', null, 'world', undefined, 'test'], remove all falsy values.
+
+// function removeFalsyValue(arr) {
+//   const res = arr.filter(Boolean);
+//   return res;
+// }
+
+// console.log(removeFalsyValue(["", "hello", null, "world", undefined, "test"]));
+
 // Given [10, 25, 30, 15, 40], return numbers between 15 and 35.
+
+// function returnNumbers(arr) {
+//   const res = arr.filter((n) => n > 15 && n < 35);
+//   return res;
+// }
+
+// console.log(returnNumbers([10, 25, 30, 15, 40]));
+
 // Given [{name: 'John', active: true}, {name: 'Jane', active: false}], return only active users.
+
+// function activeUsers(arr) {
+//   const res = arr.filter((user) => user.active);
+//   return res;
+// }
+
+// console.log(
+//   activeUsers([
+//     { name: "John", active: true },
+//     { name: "Jane", active: false },
+//   ])
+// );
+
 // Given ['short', 'a', 'longer word', 'tiny'], return words longer than 4 characters.
+
+// function longerThan4Char(arr) {
+//   const res = arr.filter((n) => n.length > 4);
+//   return res;
+// }
+
+// console.log(longerThan4Char(["short", "a", "longer word", "tiny"]));
+
 // Given [3, 7, 2, 9, 15, 4], return the first number divisible by 3.
+
+// function firstNumberDivBy3(arr) {
+//   const res = arr.filter((n) => n % 3 === 0);
+//   return res;
+// }
+
+// console.log(firstNumberDivBy3([3, 7, 2, 9, 15, 4]));
+
 // Given [5, 10, 15, 20, 25], find the last number less than 20.
+
+// function findLastNum(arr) {
+//   //   const res = arr.findLast((n) => n < 20);
+//   const res = arr
+//     .slice()
+//     .reverse()
+//     .find((n) => n < 20);
+//   return res;
+// }
+// console.log(findLastNum([5, 10, 15, 20, 25]));
+
 // Given [{id: 1, completed: true}, {id: 2, completed: false}], find the task with id 2.
+
+// function findTask(arr) {
+//   const res = arr.find((n) => n.id === 2);
+//   return res;
+// }
+
+// console.log(
+//   findTask([
+//     { id: 1, completed: true },
+//     { id: 2, completed: false },
+//   ])
+// );
+
 // Given ['cat', 'dog', 'bird', 'fish'], check if 'dog' exists.
+
+// function dogExists(arr) {
+//   //   const res = arr.some((item) => item === "dog");
+//   const res = arr.includes("dog");
+//   return res;
+// }
+
+// console.log(dogExists(["cat", "dog", "bird", "fish"]));
+
 // Given [2, 4, 6, 8, 10], return numbers not equal to 6.
+
+// function numberNotEqual(arr) {
+//   const res = arr.filter((item) => item !== 6);
+//   return res;
+// }
+
+// console.log(numberNotEqual([2, 4, 6, 8, 10]));
+
 // Given ['JavaScript', 'Python', 'Java', 'C++'], return languages containing 'Java'.
+
+// function languagesContainingJava(arr) {
+//   const res = arr.filter((item) => item.includes("Java"));
+//   return res;
+// }
+
+// console.log(languagesContainingJava(["JavaScript", "Python", "Java", "C++"]));
+
 // Given [1, 2, 3, 4, 5, 6], return numbers that are NOT divisible by 2.
+
+// function notDivisibleBy2(arr) {
+//   const res = arr.filter((item) => item % 2 !== 0);
+//   return res;
+// }
+
+// console.log(notDivisibleBy2([1, 2, 3, 4, 5, 6]));
+
 // Given [{age: 25}, {age: 17}, {age: 30}], return objects where age is 18 or more.
+
+// function ageMoreThan18(arr) {
+//   const res = arr.filter((item) => item.age >= 18);
+//   return res;
+// }
+
+// console.log(ageMoreThan18([{ age: 25 }, { age: 17 }, { age: 30 }]));
+
 // Given [10, 20, 30, 40], find the index of 30.
+
+// function indexOf30(arr) {
+//   const res = arr.indexOf(30);
+//   return res;
+// }
+
+// console.log(indexOf30([10, 20, 30, 40]));
+
 // Given ['test', 'hello', 'test', 'world'], find the last index of 'test'.
+
+// function lastIndexOfTest(arr) {
+//   const res = arr.lastIndexOf("test");
+//   return res;
+// }
+
+// console.log(lastIndexOfTest(["test", "hello", "test", "world"]));
+
 // Given [1, 3, 5, 7, 9], check if the number 4 exists.
+
+// function check4Exists(arr) {
+//   //   const res = arr.some((item) => item === 4);
+//   const res = arr.includes(4);
+//   return res;
+// }
+
+// console.log(check4Exists([1, 3, 5, 7, 9]));
+
 // Given [{price: 100}, {price: 50}, {price: 150}], return items with price under 100.
+
+// function priceUnder100(arr) {
+//   const res = arr.filter((item) => item.price < 100);
+//   return res;
+// }
+
+// console.log(priceUnder100([{ price: 100 }, { price: 50 }, { price: 150 }]));
 
 // Transformations (41-60)
 
