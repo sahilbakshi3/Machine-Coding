@@ -571,28 +571,213 @@
 
 // console.log(greaterThan25([10, 20, 30, 40, 50]));
 
+{
+  /* ----------------------------------------------------------------- */
+}
 // Aggregations (61-80)
 
 // Given [5, 10, 15, 20], calculate the product of all numbers.
+
+// function productOfNumbers(arr) {
+//   const res = arr.reduce((prod, i) => prod * i, 1);
+//   return res;
+// }
+
+// console.log(productOfNumbers([5, 10, 15, 20]));
+
 // Given ['Hello', ' ', 'World', '!'], concatenate into one string.
+
+// function concatTo1Str(arr) {
+//   const res = arr.join("");
+//   return res;
+// }
+
+// console.log(concatTo1Str(["Hello", " ", "World", "!"]));
+
 // Given [1, 2, 3, 4, 5], calculate the average.
+
+// function calcAverage(arr) {
+//   const res = arr.reduce((a, b) => a + b, 0) / arr.length;
+//   return res;
+// }
+
+// console.log(calcAverage([1, 2, 3, 4, 5]));
+
 // Given [[1, 2], [3, 4], [5, 6]], count the total number of elements.
+
+// function totalElements(arr) {
+//   const res = arr.flat(1).length;
+//   return res;
+// }
+
+// console.log(
+//   totalElements([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6],
+//   ])
+// );
+
 // Given [{quantity: 2}, {quantity: 3}, {quantity: 5}], sum all quantities.
+
+// function sumAllQuantities(arr) {
+//   const res = arr.reduce((sum, index) => sum + index.quantity, 0);
+//   return res;
+// }
+
+// console.log(
+//   sumAllQuantities([{ quantity: 2 }, { quantity: 3 }, { quantity: 5 }])
+// );
+
 // Given ['a', 'b', 'c', 'd', 'e'], create a single string without separators.
+
+// function singleStringWithoutSeparators(arr) {
+//   const res = arr.join("");
+//   return res;
+// }
+
+// console.log(singleStringWithoutSeparators(["a", "b", "c", "d", "e"]));
+
 // Given [true, false, true, true, false], count how many are true.
+
+// function countTrue(arr) {
+//   const res = arr.filter(Boolean).length;
+//   return res;
+// }
+
+// console.log(countTrue([true, false, true, true, false]));
+
 // Given [10, 5, 8, 20, 3], find the difference between max and min.
+
+// function diffBwMaxMin(arr) {
+//   const res = Math.max(...arr) - Math.min(...arr);
+//   return res;
+// }
+
+// console.log(diffBwMaxMin([10, 5, 8, 20, 3]));
+
 // Given [{price: 10, qty: 2}, {price: 5, qty: 3}], calculate total cost.
+
+// function calcTotalCost(arr) {
+//   const res = arr.reduce((sum, index) => sum + index.price * index.qty, 0);
+//   return res;
+// }
+
+// console.log(
+//   calcTotalCost([
+//     { price: 10, qty: 2 },
+//     { price: 5, qty: 3 },
+//   ])
+// );
+
 // Given [1, 2, 3, 4, 5], create an object with sum, min, and max properties.
+
+// function objectWithMinMaxSum(arr) {
+//   const res = arr.reduce(
+//     (a, i) => ({
+//       sum: a.sum + i,
+//       min: Math.min(a.min, i),
+//       max: Math.max(a.max, i),
+//     }),
+//     { sum: 0, min: Infinity, max: -Infinity }
+//   );
+
+//   return res;
+// }
+
+// console.log(objectWithMinMaxSum([1, 2, 3, 4, 5]));
+
 // Given ['apple', 'banana', 'cherry'], find the longest word.
+
+// function findLongestWord(arr) {
+//   const res = arr.reduce((a, b) => (a.length > b.length ? a : b));
+//   return res;
+// }
+
+// console.log(findLongestWord(["apple", "banana", "cherry"]));
+
 // Given ['a', 'bb', 'ccc'], calculate the total length of all strings.
+
+// function totalLength(arr) {
+//   //   const res = arr.join("").length;
+
+//   const res = arr.reduce((sum, str) => sum + str.length, 0);
+//   return res;
+// }
+
+// console.log(totalLength(["a", "bb", "ccc"]));
+
 // Given [2, 4, 6, 8], check if the sum is greater than 15.
+
+// function sumGreaterThan15(arr) {
+//   const res = arr.reduce((sum, i) => sum + i, 0) > 15;
+//   return res;
+// }
+
+// console.log(sumGreaterThan15([2, 4, 6, 8]));
+
 // Given [{score: 80}, {score: 90}, {score: 70}], calculate average score.
+
+// function avgScore(arr) {
+//   const res = arr.reduce((sum, i) => sum + i.score, 0) / arr.length;
+//   return res;
+// }
+
+// console.log(avgScore([{ score: 80 }, { score: 90 }, { score: 70 }]));
+
 // Given [5, 5, 5, 5], multiply all numbers together.
+
+// function multiplyAllNumbers(arr) {
+//   const res = arr.reduce((prod, i) => prod * i, 1);
+//   return res;
+// }
+
+// console.log(multiplyAllNumbers([5, 5, 5, 5]));
+
 // Given [[1, 2], [3], [4, 5, 6]], flatten and sum all numbers.
+
+// function flatAllNumbers(arr) {
+//   const res = arr.flat().reduce((sum, i) => sum + i, 0);
+//   return res;
+// }
+
+// console.log(flatAllNumbers([[1, 2], [3], [4, 5, 6]]));
+
 // Given ['red', 'green', 'blue', 'yellow'], find the shortest word.
+
+// function shortestWord(arr) {
+//   const res = arr.reduce((a, b) => (a.length < b.length ? a : b));
+//   return res;
+// }
+
+// console.log(shortestWord(["red", "green", "blue", "yellow"]));
+
 // Given [10, 20, 30, 40, 50], calculate the median value.
+
+// function medianValue(arr) {
+//   const res = [...arr].sort((a, b) => a - b)[Math.floor(arr.length / 2)];
+//   return res;
+// }
+
+// console.log(medianValue([10, 20, 30, 40, 50]));
+
 // Given [{count: 5}, {count: 10}, {count: 15}], find the maximum count.
+
+// function maxCount(arr) {
+//   const res = arr.reduce((a, b) => Math.max(a, b.count), -Infinity);
+//   return res;
+// }
+
+// console.log(maxCount([{ count: 5 }, { count: 10 }, { count: 15 }]));
+
 // Given [1, -2, 3, -4, 5], sum only the positive numbers.
+
+// function sumOfPositiveNumbers(arr) {
+//   const res = arr.filter((item) => item > 0).reduce((sum, i) => sum + i, 0);
+//   return res;
+// }
+
+// console.log(sumOfPositiveNumbers([1, -2, 3, -4, 5]));
 
 // Complex Operations (81-100)
 
