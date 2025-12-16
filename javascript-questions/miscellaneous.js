@@ -143,31 +143,61 @@
 
 // console.log(a);
 
-function computeAmount() {
-  let total = 0;
+// function computeAmount() {
+//   let total = 0;
 
-  const api = {
-    lacs(n) {
-      total += n * 100000;
-      return api;
-    },
-    crore(n) {
-      total += n * 10000000;
-      return api;
-    },
-    thousand(n) {
-      total += n * 1000;
-      return api;
-    },
+//   const api = {
+//     lacs(n) {
+//       total += n * 100000;
+//       return api;
+//     },
+//     crore(n) {
+//       total += n * 10000000;
+//       return api;
+//     },
+//     thousand(n) {
+//       total += n * 1000;
+//       return api;
+//     },
 
-    value() {
-      return total;
-    },
-  };
+//     value() {
+//       return total;
+//     },
+//   };
 
-  return api;
-}
+//   return api;
+// }
 
-console.log(
-  computeAmount().lacs(15).crore(5).lacs(20).thousand(45).crore(7).value()
-);
+// console.log(
+//   computeAmount().lacs(15).crore(5).lacs(20).thousand(45).crore(7).value()
+// );
+
+const arr = [
+  { id: 1, name: "name1", rollNo: 23, age: 12 },
+  { id: 2, name: "name2", rollNo: 22, age: 14 },
+  { id: 3, name: "name3", rollNo: 25, age: 15 },
+  { id: 4, name: "name4", rollNo: 26, age: 17 },
+  { id: 5, name: "name5", rollNo: 27, age: 18 }, // biggest age
+];
+
+// const eldestAge = (arr) => {
+//   const person = arr.find((p) => p.name === "name4");
+//   console.log(person.name);
+// };
+
+// eldestAge(arr);
+
+const eldestAge = (arr) => {
+  return arr.reduce((eldest, curr) => {
+    return curr.age > eldest.age ? curr : eldest;
+  });
+};
+
+const eldestUser = eldestAge(arr);
+console.log(eldestUser);
+
+const concat = (arr) => {
+  return arr.map((user) => user.name).join(" ");
+};
+
+console.log(concat(arr));
