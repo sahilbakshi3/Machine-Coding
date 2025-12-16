@@ -382,28 +382,194 @@
 
 // console.log(priceUnder100([{ price: 100 }, { price: 50 }, { price: 150 }]));
 
+{
+  /* ---------------------------------------------------------------- */
+}
 // Transformations (41-60)
 
 // Given [1, 2, 3, 4, 5], multiply each number by 10.
+
+// function multiplyNumberBy10(arr) {
+//   const res = arr.map((item) => item * 10);
+//   return res;
+// }
+
+// console.log(multiplyNumberBy10([1, 2, 3, 4, 5]));
+
 // Given ['hello', 'world'], return the length of each string.
+
+// function lengthofString(arr) {
+//   const res = arr.map((item) => item.length);
+//   return res;
+// }
+
+// console.log(lengthofString(["hello", "world"]));
+
 // Given [1, 2, 3], return each number as a string.
+
+// function conertToString(arr) {
+//   const res = arr.map(String);
+//   return res;
+// }
+
+// console.log(conertToString([1, 2, 3]));
+
 // Given ['1', '2', '3'], convert each string to a number.
+
+// function convertToNumber(arr) {
+//   const res = arr.map(Number);
+//   return res;
+// }
+
+// console.log(convertToNumber(["1", "2", "3"]));
+
 // Given [{name: 'John'}, {name: 'Jane'}], extract just the names into an array.
+
+// function extractNameToArray(arr) {
+//   const res = arr.map((item) => item.name);
+//   return res;
+// }
+
+// console.log(extractNameToArray([{ name: "John" }, { name: "Jane" }]));
+
 // Given [1, 2, 3, 4, 5], return each number squared.
+
+// function numberSquared(arr) {
+//   const res = arr.map((item) => item * item);
+//   return res;
+// }
+
+// console.log(numberSquared([1, 2, 3, 4, 5]));
+
 // Given ['apple', 'banana'], add ' fruit' to the end of each word.
+
+// function addFruit(arr) {
+//   const res = arr.map((item) => item + "fruit");
+//   return res;
+// }
+
+// console.log(addFruit(["apple", "banana"]));
+
 // Given [10, 20, 30], divide each number by 10.
+
+// function divideNumber10(arr) {
+//   const res = arr.map((item) => item / 10);
+//   return res;
+// }
+
+// console.log(divideNumber10([10, 20, 30]));
+
 // Given [{firstName: 'John', lastName: 'Doe'}], create full names as 'John Doe'.
+
+// function fullNames(arr) {
+//   const res = arr.map((item) => `${item.firstName} ${item.lastName}`);
+//   return res;
+// }
+
+// console.log(fullNames([{ firstName: "John", lastName: "Doe" }]));
+
 // Given [true, false, true], convert to 1s and 0s.
+
+// function convertTrueAndFalse(arr) {
+//   const res = arr.map((item) => (item ? 1 : 0));
+//   return res;
+// }
+
+// console.log(convertTrueAndFalse([true, false, true]));
+
 // Given [1, 2, 3], create objects with a 'value' property for each number.
+
+// function objectsValue(arr) {
+//   const res = arr.map((item) => ({ value: item }));
+//   return res;
+// }
+
+// console.log(objectsValue([1, 2, 3]));
+
 // Given ['a', 'b', 'c'], return each letter with its index like 'a-0'.
+
+// function valueToIndex(arr) {
+//   const res = arr.map((value, index) => `${value}-${index}`);
+//   return res;
+// }
+
+// console.log(valueToIndex(["a", "b", "c"]));
+
 // Given [5, 10, 15], return the difference between each number and 100.
+
+// function differenceNumber(arr) {
+//   const res = arr.map((item) => 100 - item);
+//   return res;
+// }
+
+// console.log(differenceNumber([5, 10, 15]));
+
 // Given [{x: 1, y: 2}, {x: 3, y: 4}], return array of only x values.
+
+// function xValues(arr) {
+//   const res = arr.map((item) => item.x);
+//   return res;
+// }
+// console.log(
+//   xValues([
+//     { x: 1, y: 2 },
+//     { x: 3, y: 4 },
+//   ])
+// );
+
 // Given [2, 4, 6], return each number raised to the power of 3.
+
+// function powerOf3(arr) {
+//   const res = arr.map((item) => item ** 3);
+//   return res;
+// }
+
+// console.log(powerOf3([2, 4, 6]));
+
 // Given ['John', 'Jane', 'Bob'], create email addresses like 'john@example.com'.
+
+// function emailAddress(arr) {
+//   const res = arr.map((item) => `${item.toLowerCase()}@example.com`);
+//   return res;
+// }
+
+// console.log(emailAddress(["John", "Jane", "Bob"]));
+
 // Given [100, 200, 300], return each number with 10% added.
+
+// function percent10Added(arr) {
+//   const res = arr.map((item) => item * 1.1);
+//   return res;
+// }
+
+// console.log(percent10Added([100, 200, 300]));
+
 // Given ['red', 'blue', 'green'], create objects with color and length properties.
+
+// function objectsWithColor(arr) {
+//   const res = arr.map((item) => ({ color: item, length: item.length }));
+//   return res;
+// }
+
+// console.log(objectsWithColor(["red", "blue", "green"]));
+
 // Given [1, 2, 3, 4, 5], return only even numbers squared.
+
+// function evenNumberSquared(arr) {
+//   const res = arr.filter((item) => item % 2 === 0).map((item) => item ** 2);
+//   return res;
+// }
+
+// console.log(evenNumberSquared([1, 2, 3, 4, 5]));
+
 // Given [10, 20, 30, 40, 50], return numbers greater than 25, then double them.
+
+// function greaterThan25(arr) {
+//   const res = arr.filter((item) => item > 25).map((item) => item * 2);
+//   return res;
+// }
+
+// console.log(greaterThan25([10, 20, 30, 40, 50]));
 
 // Aggregations (61-80)
 
