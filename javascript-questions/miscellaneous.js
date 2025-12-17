@@ -172,13 +172,13 @@
 //   computeAmount().lacs(15).crore(5).lacs(20).thousand(45).crore(7).value()
 // );
 
-const arr = [
-  { id: 1, name: "name1", rollNo: 23, age: 12 },
-  { id: 2, name: "name2", rollNo: 22, age: 14 },
-  { id: 3, name: "name3", rollNo: 25, age: 15 },
-  { id: 4, name: "name4", rollNo: 26, age: 17 },
-  { id: 5, name: "name5", rollNo: 27, age: 18 }, // biggest age
-];
+// const arr = [
+//   { id: 1, name: "name1", rollNo: 23, age: 12 },
+//   { id: 2, name: "name2", rollNo: 22, age: 14 },
+//   { id: 3, name: "name3", rollNo: 25, age: 15 },
+//   { id: 4, name: "name4", rollNo: 26, age: 17 },
+//   { id: 5, name: "name5", rollNo: 27, age: 18 }, // biggest age
+// ];
 
 // const eldestAge = (arr) => {
 //   const person = arr.find((p) => p.name === "name4");
@@ -187,17 +187,26 @@ const arr = [
 
 // eldestAge(arr);
 
-const eldestAge = (arr) => {
-  return arr.reduce((eldest, curr) => {
-    return curr.age > eldest.age ? curr : eldest;
-  });
-};
+// const eldestAge = (arr) => {
+//   return arr.reduce((eldest, curr) => {
+//     return curr.age > eldest.age ? curr : eldest;
+//   });
+// };
 
-const eldestUser = eldestAge(arr);
-console.log(eldestUser);
+// const eldestUser = eldestAge(arr);
+// console.log(eldestUser);
 
-const concat = (arr) => {
-  return arr.map((user) => user.name).join(" ");
-};
+// const concat = (arr) => {
+//   return arr.map((user) => user.name).join(" ");
+// };
 
-console.log(concat(arr));
+// console.log(concat(arr));
+
+var x = 20;
+
+function foo() {
+  console.log(x);
+  var x = 10;
+}
+
+foo();

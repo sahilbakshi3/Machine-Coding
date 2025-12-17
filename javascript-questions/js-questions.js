@@ -779,25 +779,268 @@
 
 // console.log(sumOfPositiveNumbers([1, -2, 3, -4, 5]));
 
+{
+  /*------------------------------------------------------------------- */
+}
+
 // Complex Operations (81-100)
 
 // Given [3, 1, 4, 1, 5, 9, 2, 6], sort in descending order.
+
+// function sortDesc(arr) {
+//   const res = arr.sort((a, b) => b - a);
+//   return res;
+// }
+
+// console.log(sortDesc([3, 1, 4, 1, 5, 9, 2, 6]));
+
 // Given [{name: 'John', age: 30}, {name: 'Jane', age: 25}], sort by age.
+
+// function sortByAge(arr) {
+//   const res = [...arr].sort((a, b) => a.age - b.age);
+//   return res;
+// }
+
+// console.log(
+//   sortByAge([
+//     { name: "John", age: 30 },
+//     { name: "Jane", age: 25 },
+//   ])
+// );
+
 // Given ['banana', 'apple', 'cherry'], sort alphabetically.
+
+// function sortAlpha(arr) {
+//   const res = [...arr].sort();
+//   return res;
+// }
+
+// console.log(sortAlpha(["banana", "apple", "cherry"]));
+
 // Given [1, 2, 3, 2, 4, 3, 5], count occurrences of each number.
+
+// function countOccurences(arr) {
+//   const res = arr.reduce((a, i) => {
+//     a[i] = (a[i] || 0) + 1;
+//     return a;
+//   }, {});
+//   return res;
+// }
+
+// console.log(countOccurences([1, 2, 3, 2, 4, 3, 5]));
+
 // Given [1, 2, 3, 4, 5, 6, 7, 8], split into chunks of 3.
+
+// function splitChunks(arr) {
+//   const res = arr.reduce(
+//     (a, _, i) => (i % 3 ? a : [...a, arr.slice(i, i + 3)]),
+//     []
+//   );
+//   return res;
+// }
+
+// console.log(splitChunks([1, 2, 3, 4, 5, 6, 7, 8]));
+
 // Given ['a1', 'b2', 'a3', 'b4'], group by first letter.
+
+// function groupByFirstLetter(arr) {
+//   const res = arr.reduce((a, x) => {
+//     const k = x[0];
+//     (a[k] ??= []).push(x);
+//     return a;
+//   }, {});
+//   return res;
+// }
+
+// console.log(groupByFirstLetter(["a1", "b2", "a3", "b4"]));
+
 // Given [1, 2, 2, 3, 3, 3, 4], return only elements that appear more than once.
+
+// function elementMoreThanOnce(arr) {
+//   const res = arr.filter((item) => arr.indexOf(item) !== arr.lastIndexOf(item));
+//   return res;
+// }
+
+// console.log(elementMoreThanOnce([1, 2, 2, 3, 3, 3, 4]));
+
 // Given [10, 20, 30, 40, 50], return every other element.
+
+// function everyOtherElement(arr) {
+//   const res = arr.filter((_, item) => item % 2 === 0);
+//   return res;
+// }
+
+// console.log(everyOtherElement([10, 20, 30, 40, 50]));
+
 // Given two arrays [1, 2, 3] and [2, 3, 4], find elements only in the first array.
+
+// function elementsInFirstArr(arr1, arr2) {
+//   const res = arr1.filter((item) => !arr2.includes(item));
+//   return res;
+// }
+
+// console.log(elementsInFirstArr([1, 2, 3], [2, 3, 4]));
+
 // Given [5, 2, 8, 1, 9], return the second largest number.
+
+// function secondLargestNumber(arr) {
+//   const res = arr.sort((a, b) => b - a)[1];
+//   return res;
+// }
+
+// console.log(secondLargestNumber([5, 2, 8, 1, 9]));
+
 // Given ['the', 'quick', 'brown', 'fox'], find the word with most vowels.
+
+// function vowelCount(word) {
+//   return word
+//     .toLowerCase()
+//     .split("")
+//     .filter((ch) => "aeiou".includes(ch)).length;
+// }
+
+// function mostVowels(arr) {
+//   // return arr.reduce((maxWord, curr) =>
+//   //   vowelCount(curr) > vowelCount(maxWord) ? curr : maxWord
+//   // );
+
+//   const res = arr.reduce((a, b) =>
+//     [...b].filter((ch) => "aeiou".includes(ch)).length >
+//     [...a].filter((ch) => "aeiou".includes(ch)).length
+//       ? b
+//       : a
+//   );
+//   return res;
+// }
+
+// console.log(mostVowels(["the", "quick", "brown", "fox"]));
+
 // Given [1, 2, 3, 4, 5], create all possible pairs.
-// Given [{name: 'John', dept: 'IT'}, {name: 'Jane', dept: 'HR'}], group by department.
+
+// function allPairs(arr) {
+//   // const res = [];
+
+//   // for (let i = 0; i < arr.length; i++) {
+//   //   for (j = i + 1; j < arr.length; j++) {
+//   //     res.push([arr[i], arr[j]]);
+//   //   }
+//   // }
+//   // return res;
+
+//   const res = arr.flatMap((value, index) =>
+//     arr.slice(index + 1).map((next) => [value, next])
+//   );
+//   return res;
+// }
+
+// console.log(allPairs([1, 2, 3, 4, 5]));
+
 // Given [10, 20, 30, 40], calculate running totals [10, 30, 60, 100].
-// Given ['apple', 'banana', 'apricot'], create an object with first letter as key and array of words as value.
+
+// function runningTotals(arr) {
+//   let sum = 0;
+
+//   const res = arr.map((item) => {
+//     sum += item;
+//     return sum;
+//   });
+//   return res;
+// }
+
+// console.log(runningTotals([10, 20, 30, 40]));
+
 // Given [1, 2, 3, 4, 5, 6], rotate the array right by 2 positions.
+
+// function rotateElementsRight(arr, k) {
+//   const n = arr.length;
+
+//   const r = k % n;
+
+//   return [...arr.slice(-r), ...arr.slice(0, n - r)];
+// }
+
+// console.log(rotateElementsRight([1, 2, 3, 4, 5, 6], 2));
+
+// Given [1, 2, 3, 4, 5, 6], rotate the array left by 2 positions.
+
+// function rotateElementsLeft(arr, k) {
+//   const n = arr.length;
+
+//   const r = k % n;
+
+//   return [...arr.slice(r), ...arr.slice(0, r)];
+// }
+
+// console.log(rotateElementsLeft([1, 2, 3, 4, 5, 6], 2));
+
 // Given [[1, 2, 3], [4, 5], [6]], find the sub-array with the largest sum.
+
+// function largestSumInSubarray(arr) {
+//   // const res = arr.reduce((maxArr, currArr) => {
+//   //   const currSum = currArr.reduce((a, b) => a + b, 0);
+//   //   const maxSum = maxArr.reduce((a, b) => a + b, 0);
+
+//   //   return currSum > maxSum ? currArr : maxArr;
+//   // });
+
+//   // return res;
+
+//   let maxSum = -Infinity;
+//   let res = [];
+
+//   for (const sub of arr) {
+//     const sum = sub.reduce((a, b) => a + b, 0);
+//     if (sum > maxSum) {
+//       maxSum = sum;
+//       res = sub;
+//     }
+//   }
+//   return res;
+// }
+
+// console.log(largestSumInSubarray([[1, 2, 3], [4, 5], [6]]));
+
 // Given [3, 7, 3, 3, 7, 9, 9], find the number that appears most frequently.
+
+// function appearsMost(arr) {
+//   const map = new Map();
+//   for (let num of arr) {
+//     map.set(num, (map.get(num) || 0) + 1);
+//   }
+
+//   let max = 0,
+//     ans;
+
+//   for (let [key, value] of map) {
+//     if (value > max) {
+//       max = value;
+//       ans = key;
+//     }
+//   }
+//   return ans;
+// }
+// console.log(appearsMost([3, 7, 3, 3, 7, 9, 9]));
+
 // Given ['racecar', 'hello', 'level'], return only palindromes.
-// Given [{id: 1, parentId: null}, {id: 2, parentId: 1}], organize into a tree structure.
+
+// function isValid(word) {
+//   let i = 0;
+//   let j = word.length - 1;
+
+//   while (i < j) {
+//     if (word[i] !== word[j]) {
+//       return false;
+//     } else {
+//       i++;
+//       j--;
+//     }
+//   }
+//   return true;
+// }
+
+// function palindromes(arr) {
+//   const res = arr.filter(isValid);
+//   return res;
+// }
+
+// console.log(palindromes(["racecar", "hello", "level"]));
