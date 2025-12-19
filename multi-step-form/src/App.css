@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+}
+
+.container {
+  width: 380px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111827;
+}
+
+input {
+  height: 44px;
+  padding: 0 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+button {
+  height: 44px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[type="button"] {
+  background: transparent;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+a {
+  font-size: 14px;
+  color: #111827;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.message {
+  width: 380px;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.message span {
+  font-size: 14px;
+  color: #374151;
+}
