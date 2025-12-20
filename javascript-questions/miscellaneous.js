@@ -202,11 +202,14 @@
 
 // console.log(concat(arr));
 
-var x = 20;
+// var x = 20;
 
-function foo() {
-  console.log(x);
-  var x = 10;
-}
+// function foo() {
+//   console.log(x);
+//   var x = 10;
+// }
 
-foo();
+// foo();
+
+// console.log([] == []);
+// console.log([] === []);
