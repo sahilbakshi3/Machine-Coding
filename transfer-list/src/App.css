@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  height: 30px;
+  background-color: lightcoral;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.check {
+  background-color: black;
+  color: white;
+}
+
+.box {
+  width: 200px;
+  height: 250px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
