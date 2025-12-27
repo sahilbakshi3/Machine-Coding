@@ -2,19 +2,67 @@
 
 // Given {name: 'John', age: 30}, access and return the name property.
 
-function getName(obj) {
-  return obj.name;
-}
+// function getName(obj) {
+//   return obj.name;
+// }
 
-console.log(getName({ name: "John", age: 30 }));
+// console.log(getName({ name: "John", age: 30 }));
 
 // Given {a: 1, b: 2, c: 3}, return an array of all keys.
+
+// function arrayKeys(obj) {
+//   return Object.keys(obj);
+// }
+
+// console.log(arrayKeys({ a: 1, b: 2, c: 3 }));
+
 // Given {x: 10, y: 20, z: 30}, return an array of all values.
+
+// function arrayOfValues(obj) {
+//   return Object.values(obj);
+// }
+
+// console.log(arrayOfValues({ x: 10, y: 20, z: 30 }));
+
 // Given {name: 'Alice', age: 25}, add a new property city: 'NYC'.
+
+// function addProperty(obj) {
+//   obj.city = "NYC";
+//   return obj;
+// }
+
+// console.log(addProperty({ name: "Alice", age: 25 }));
+
 // Given {a: 1, b: 2, c: 3}, delete the property b.
+
+// function delProperty(obj) {
+//   delete obj.b;
+//   return obj;
+// }
+
+// console.log(delProperty({ a: 1, b: 2, c: 3 }));
+
 // Given {firstName: 'John', lastName: 'Doe'}, check if property age exists.
+
+// function propertyExist(obj) {
+//   return "age" in obj;
+// }
+
+// console.log(propertyExist({ firstName: "John", lastName: "Doe" }));
+
 // Given {x: 5, y: 10}, update the value of x to 15.
+
+// function updateValue(obj) {
+//   obj.x = 15;
+//   return obj;
+// }
+
+// console.log(updateValue({ x: 5, y: 10 }));
+
 // Given {name: 'John', age: 30, city: 'NYC'}, count the number of properties.
+
+
+
 // Given {a: 1, b: 2} and {c: 3, d: 4}, merge them into one object.
 // Given {name: 'John', age: 30, city: 'NYC'}, create a copy of the object.
 // Given {a: 1, b: 2, c: 3}, convert to an array of [key, value] pairs.

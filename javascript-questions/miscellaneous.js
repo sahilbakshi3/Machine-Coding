@@ -213,3 +213,26 @@
 
 // console.log([] == []);
 // console.log([] === []);
+
+// const arr = [1, 2, 3];
+// arr[10] = 11;
+// console.log(arr.length);
+
+// // 11
+
+// const arr = [1, 2, 3, 4, 5];
+// arr.length = 2;
+// console.log(arr);
+
+// console.log(
+//   [1, 2, 3].map((num) => {
+//     if (num > 0) return;
+//     return num * 2;
+//   })
+// );
+
+// // [undef, undef, undef];
+
+// console.log([1, 2, 3], [2, 3, 4]);
+
+// console.log([..."hello"]);
