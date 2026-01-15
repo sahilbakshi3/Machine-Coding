@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.ball {
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 50%;
+}
