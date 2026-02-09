@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.story-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  .add-story {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: white;
+    color: black;
+    height: 5rem;
+    width: 5rem;
+    border: 5px solid black;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+
+  .story-preview {
+    display: flex;
+    img {
+      height: 5rem;
+      width: 5rem;
+      border: 5px solid red;
+      border-radius: 5rem;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
