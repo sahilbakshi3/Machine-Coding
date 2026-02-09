@@ -1044,3 +1044,29 @@
 // }
 
 // console.log(palindromes(["racecar", "hello", "level"]));
+
+// const str = "india is my country";
+
+// const res = str
+//   .split(" ")
+//   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+//   .join(" ");
+
+// console.log(res);
+
+// let i = 1;
+
+// const id = setInterval(() => {
+//   console.log(i);
+//   i++;
+
+//   if (i > 10) {
+//     clearInterval(id);
+//   }
+// }, 1000);
+
+// for (let i = 1; i <= 10; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   }, i * 1000);
+// }
