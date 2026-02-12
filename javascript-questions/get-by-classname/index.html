@@ -1,0 +1,76 @@
+<!-- Normal Implelnetation of getElementsByClassName -->
+
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="title">Heading</h2>
+
+    <div class="card">Card 1</div>
+    <div class="card highlight">Card 2</div>
+    <div class="card highlight">Card 3</div>
+    <div class="box">Box 1</div>
+
+    <script>
+      const cards = document.getElementsByClassName("card");
+
+      console.log(cards);
+
+      const highlitedCards = document.getElementsByClassName("card highlight");
+      console.log(highlitedCards);
+    </script>
+  </body>
+</html> -->
+
+<!-- Functional Implelnetation of getElementsByClassName -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="a" id="root">
+      <div class="b" id="b-1">
+        <div class="a" id="a-2">
+          <div class="d" id="d-1"></div>
+        </div>
+        <div class="c" id="c-1">
+          <div class="a" id="a-3">
+            <div class="d" id="d-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const getByClassName = (root, className) => {
+        const search = (node) => {
+          let result = [];
+
+          if (node.classList.contains(className)) {
+            result.push(node.id);
+          }
+
+          for (let i of node.children) {
+            const res = search(i);
+            result = [...result, ...res];
+          }
+
+          return result;
+        };
+
+        return search(root);
+      };
+
+      const root = document.getElementById("root");
+      console.log(getByClassName(root, "a"));
+    </script>
+  </body>
+</html>
