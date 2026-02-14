@@ -105,7 +105,7 @@ const SeatBooking = () => {
                   <div>{`${category} (${curr[1].price})`}</div>
                 </div>
               );
-            })}
+            })} 
 
             {/* Booked legend */}
             <div
