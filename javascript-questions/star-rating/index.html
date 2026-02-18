@@ -1,0 +1,58 @@
+<div class="tabs">
+  <div class="tab-header">
+    <button class="tab-button active" data-tab="tab1">Tab 1</button>
+    <button class="tab-button" data-tab="tab2">Tab 2</button>
+    <button class="tab-button" data-tab="tab3">Tab 3</button>
+  </div>
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane active">Content for Tab 1</div>
+    <div id="tab2" class="tab-pane">Content for Tab 2</div>
+    <div id="tab3" class="tab-pane">Content for Tab 3</div>
+  </div>
+</div>
+``````css
+.tab-header {
+  display: flex;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background-color: #ccc;
+}
+
+.tab-pane {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.tab-pane.active {
+  display: block;
+}
+``````javascript
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelector('.tabs');
+  const tabButtons = tabs.querySelectorAll('.tab-button');
+  const tabPanes = tabs.querySelectorAll('.tab-pane');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Deactivate all buttons and panes
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabPanes.forEach(pane => pane.classList.remove('active'));
+
+      // Activate the clicked button
+      button.classList.add('active');
+
+      // Activate the corresponding pane
+      const tabId = button.dataset.tab;
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+});

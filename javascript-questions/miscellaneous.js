@@ -236,3 +236,17 @@
 // console.log([1, 2, 3], [2, 3, 4]);
 
 // console.log([..."hello"]);
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log("".repeat(5 - i) + "*".repeat(2 * i - 1));
+// }
+
+const getGrade = (marks) => {
+  if (marks >= 90) {
+    return "A";
+  } else if (marks >= 75) return "B";
+  else if (marks >= 60) return "C";
+  return "Fail";
+};
+
+console.log(getGrade(56));

@@ -61,24 +61,103 @@
 
 // Given {name: 'John', age: 30, city: 'NYC'}, count the number of properties.
 
+// const obj = { name: "John", age: 30, city: "NYC" };
 
+// const count = Object.keys(obj).length;
+// console.log(count); // 3
 
 // Given {a: 1, b: 2} and {c: 3, d: 4}, merge them into one object.
+
+// const obj = Object.assign({ a: 1, b: 2 }, { c: 3, d: 4 });
+// console.log(obj);
+
 // Given {name: 'John', age: 30, city: 'NYC'}, create a copy of the object.
+
+// const obj = { name: "John", age: 30, city: "NYC" };
+// const copy = { ...obj };
+
+// console.log(copy);
+
 // Given {a: 1, b: 2, c: 3}, convert to an array of [key, value] pairs.
+
+// const obj = Object.entries({ a: 1, b: 2, c: 3 });
+// console.log(obj);
+
 // Given [['a', 1], ['b', 2]], convert to an object.
+
+// const obj = Object.fromEntries([
+//   ["a", 1],
+//   ["b", 2],
+// ]);
+// console.log(obj);
+
 // Given {name: 'John', age: 30}, check if the object is empty.
+
+// const obj = Object.keys({ name: "John", age: 30 }).length === 0;
+// console.log(obj);
+
 // Given {a: 1, b: 2, c: 3}, return a new object with only keys a and c.
+
+// const res = (({ a, c }) => ({ a, c }))({ a: 1, b: 2, c: 3 });
+// console.log(res);
+
 // Given {name: 'JOHN', age: 30}, convert the name to lowercase.
+
+// const obj = { name: "JOHN", age: 30 };
+
+// const res = { ...obj, name: obj.name.toLowerCase() };
+// console.log(res);
+
 // Given {x: 10, y: 20}, swap the key-value pairs to get {10: 'x', 20: 'y'}.
+
+// const obj = { x: 10, y: 20 };
+
+// const res = Object.keys(obj).map((a, b) => [b, a]);
+// console.log(res);
+
 // Given {a: 1, b: 2, c: 3}, double all values.
+
+// const obj = { a: 1, b: 2, c: 3 };
+
+// const res = Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, v * 2]));
+
+// console.log(res);
+
 // Given {name: 'John', age: null, city: 'NYC'}, remove properties with null values.
+
+// const obj = { name: "John", age: null, city: "NYC" };
+
+// const res = Object.fromEntries(
+//   Object.entries(obj).filter(([_, i]) => i !== null),
+// );
+
+// console.log(res);
+
 // Given {user: {name: 'John', address: {city: 'NYC'}}}, access the nested city property.
+
+// const obj = { user: { name: "John", address: { city: "NYC" } } };
+
+// const res = obj?.user?.address?.city;
+
+// console.log(res);
+
 // Given {a: 1, b: 2, c: 3}, check if property b has value 2.
+
+// const obj = { a: 1, b: 2, c: 3 };
+
+// const res = obj.b === 2;
+// console.log(res);
 
 // Object Transformations (21-40)
 
 // Given {a: 1, b: 2, c: 3}, create a new object where all values are squared.
+
+// const obj = { a: 1, b: 2, c: 3 };
+
+// const res = Object.fromEntries(Object.entries(obj).map(([k, i]) => [k, i * 2]));
+
+// console.log(res);
+
 // Given {firstName: 'John', lastName: 'Doe'}, create a new object with a fullName property.
 // Given {price: 100, tax: 0.1}, add a new property total with price + tax calculated.
 // Given {name: 'john', age: 30}, capitalize the first letter of name.
@@ -148,7 +227,31 @@
 // Array of Objects (81-90)
 
 // Given [{id: 1, name: 'John'}, {id: 2, name: 'Jane'}], create an object with id as key.
+
+// const arr = [
+//   { id: 1, name: "John" },
+//   { id: 2, name: "Jane" },
+// ];
+
+// const res = Object.fromEntries(arr.map((i) => [i.id, i]));
+
+// console.log(res);
+
 // Given [{type: 'a', val: 1}, {type: 'b', val: 2}, {type: 'a', val: 3}], group by type.
+
+const arr = [
+  { type: "a", val: 1 },
+  { type: "b", val: 2 },
+  { type: "a", val: 3 },
+];
+
+const res = arr.reduce((acc, curr) => {
+  (acc[curr.type] ||= []).push(curr);
+  return acc;
+}, {});
+
+console.log(res);
+
 // Given [{name: 'John', age: 30}, {name: 'Jane', age: 25}], find the oldest person.
 // Given [{score: 80}, {score: 90}, {score: 85}], calculate average score.
 // Given [{id: 1, tags: ['a', 'b']}, {id: 2, tags: ['b', 'c']}], get all unique tags.
