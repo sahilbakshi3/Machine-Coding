@@ -159,10 +159,43 @@
 // console.log(res);
 
 // Given {firstName: 'John', lastName: 'Doe'}, create a new object with a fullName property.
+
+// const obj = { firstName: "John", lastName: "Doe" };
+
+// const res = { ...obj, fullName: `${obj.firstName} ${obj.lastName}` };
+
+// console.log(res);
+
 // Given {price: 100, tax: 0.1}, add a new property total with price + tax calculated.
+
+// const obj = { prcie: 100, tax: 0.1 };
+
+// const res = { ...obj, total: obj.prcie + obj.tax * obj.prcie };
+
+// console.log(res);
+
 // Given {name: 'john', age: 30}, capitalize the first letter of name.
+
+// const obj = { name: "john", age: 30 };
+
+// const res = { ...obj, name: obj.name[0].toUpperCase() + obj.name.slice(1) };
+// console.log(res);
+
 // Given {a: 'hello', b: 'world'}, convert all string values to uppercase.
+
+// const obj = { a: "hello", b: "world" };
+
+// const res = { ...obj, a: obj.a.toUpperCase(), b: obj.b.toUpperCase() };
+// console.log(res);
+
 // Given {x: 5, y: 10, z: 15}, create a new object with only values greater than 7.
+
+// const obj = { x: 5, y: 10, z: 15 };
+
+// const res = Object.fromEntries(Object.entries(obj).filter(([_, i]) => i > 7));
+
+// console.log(res);
+
 // Given {name: 'John', age: 30, salary: 50000}, convert all number values to strings.
 // Given {a: 1, b: 2, c: 3}, prefix all keys with 'prop_'.
 // Given {temp_name: 'John', temp_age: 30}, remove 'temp_' prefix from all keys.
@@ -239,18 +272,18 @@
 
 // Given [{type: 'a', val: 1}, {type: 'b', val: 2}, {type: 'a', val: 3}], group by type.
 
-const arr = [
-  { type: "a", val: 1 },
-  { type: "b", val: 2 },
-  { type: "a", val: 3 },
-];
+// const arr = [
+//   { type: "a", val: 1 },
+//   { type: "b", val: 2 },
+//   { type: "a", val: 3 },
+// ];
 
-const res = arr.reduce((acc, curr) => {
-  (acc[curr.type] ||= []).push(curr);
-  return acc;
-}, {});
+// const res = arr.reduce((acc, curr) => {
+//   (acc[curr.type] ||= []).push(curr);
+//   return acc;
+// }, {});
 
-console.log(res);
+// console.log(res);
 
 // Given [{name: 'John', age: 30}, {name: 'Jane', age: 25}], find the oldest person.
 // Given [{score: 80}, {score: 90}, {score: 85}], calculate average score.

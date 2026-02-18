@@ -1,0 +1,61 @@
+.container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.addBtn {
+  padding: 10px 16px;
+  background: #4caf50;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.editBtn {
+  margin-right: 8px;
+  padding: 6px 10px;
+  background: #2196f3;
+}
+
+.deleteBtn {
+  padding: 6px 10px;
+  background: #f44336;
+}
