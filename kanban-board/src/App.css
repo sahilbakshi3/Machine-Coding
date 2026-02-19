@@ -1,0 +1,51 @@
+.app {
+  text-align: center;
+  font-family: Arial;
+}
+
+.board-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.board {
+  background: #f4f5f7;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  min-height: 400px;
+}
+
+.task-list {
+  background: white;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.task {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: grab;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
