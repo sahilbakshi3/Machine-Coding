@@ -1071,11 +1071,94 @@
 //   }, i * 1000);
 // }
 
-const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
+// const emojis = ["🎄", "🎅🏼", "🎁", "⭐"];
 
-/* 1 */ emojis.push("🦌");
-/* 2 */ emojis.splice(0, 2);
-/* 3 */ emojis = [...emojis, "🥂"];
-/* 4 */ emojis.length = 0;
+// /* 1 */ emojis.push("🦌");
+// /* 2 */ emojis.splice(0, 2);
+// /* 3 */ emojis = [...emojis, "🥂"];
+// /* 4 */ emojis.length = 0;
 
-console.log(emojis);
+// console.log(emojis);
+
+// const fruits = [
+//   { name: "apple", color: "red", calories: 95 },
+//   { name: "orange", color: "orange", calories: 45 },
+//   { name: "banana", color: "yellow", calories: 105 },
+//   { name: "pineapple", color: "yellow", calories: 159 },
+// ];
+
+// const res = fruits.map((item) => item.name);
+// const res = fruits
+//   .filter((item) => item.color === "yellow")
+//   .map((item) => item.name);
+
+// const res = fruits.filter((item) => item.calories < 100).map((item) => item.name);
+
+// const res = fruits.reduce((max, fruit) =>
+//   fruit.calories > max.calories ? fruit : max,
+// );
+
+// console.log(res.name);
+
+// EXAMPLES OF CLOSURES
+
+// function outer() {
+//   let message = "Hello";
+//   function inner() {
+//     console.log(message);
+//   }
+//   inner();
+// }
+
+// message = 'Goodbye';
+
+// outer();
+
+// function createCounter() {
+//   let count = 0;
+//   function increment() {
+//     count++;
+//     console.log(`Count increased to ${count}`);
+//   }
+
+//   function getCount() {
+//     return count;
+//   }
+
+//   return { increment, getCount };
+// }
+
+// const counter = createCounter();
+
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+// counter.increment();
+
+// console.log(`The current count is ${counter.getCount()}`);
+
+// function createGame() {
+//   let score = 0;
+
+//   function increaseScore(points) {
+//     score += points;
+//   }
+
+//   function decreaseScore(points) {
+//     score -= points;
+//   }
+
+//   function getScore() {
+//     return score;
+//   }
+
+//   return { increaseScore, decreaseScore, getScore };
+// }
+
+// const score = createGame();
+
+// score.increaseScore(5);
+// score.increaseScore(10);
+// score.decreaseScore(6);
+// console.log(`our current score is ${score.getScore()}`);

@@ -9,8 +9,9 @@ const App = () => {
       try {
         const api = await fetch("https://dummyjson.com/products");
         const res = await api.json();
-
+        
         setData(res.products);
+
         setLoading(false);
 
         // console.log(res);

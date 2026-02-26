@@ -1,24 +1,31 @@
-.tab-header {
-  display: flex;
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
 
-.tab-button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #f1f1f1;
-  cursor: pointer;
+.container {
+  width: 500px;
+  margin: 40px auto;
 }
 
-.tab-button.active {
-  background-color: #ccc;
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-.tab-pane {
-  display: none;
-  padding: 20px;
-  border: 1px solid #ccc;
+.card {
+  background: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
 
-.tab-pane.active {
-  display: block;
+.title {
+  font-weight: bold;
+}
+
+.company {
+  color: gray;
 }
