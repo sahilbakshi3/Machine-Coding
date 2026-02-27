@@ -20,7 +20,7 @@
   --banner-bg: #bfdbfe;
   --banner-text: #0f0f0f;
   --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monacco, Consolas, "Liberation Mono",
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
 

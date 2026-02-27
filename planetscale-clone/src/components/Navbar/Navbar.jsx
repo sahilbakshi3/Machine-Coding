@@ -12,7 +12,7 @@ const Navbar = () => {
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  });
+  }, []);
 
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>

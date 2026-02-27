@@ -13,25 +13,18 @@ const App = () => {
     <div className="app">
       <Banner />
       <Navbar />
-
       <main>
         <Hero />
         <LogoGrid />
-        <div className="testimonial-wrap">
-          <Testimonial
-            quote="We chose PlanetScale to host our most demanding Vitess and Postgres workloads, doing millions of queries per second on hundreds of terabytes of data."
-            author="Sualeh Asif - Chief Product Officer @Anysphere (Cursor)"
-          />
-        </div>
+        <Testimonial
+          quote="We chose PlanetScale to host our most demanding Vitess and Postgres workloads, doing millions of queries per second on hundreds of terabytes of data."
+          author="Sualeh Asif - Chief Product Officer @Anysphere (Cursor)"
+        />
         <ProductTabs />
-
-        <div className="testimonial-wrap">
-          <Testimonial
-            quote="Our migration to Vitess is more than just a technological upgrade; it's a strategic move to future-proof our database architecture for the next decade and beyond."
-            author="Ryan Sherlock @Intercom"
-          />
-        </div>
-
+        <Testimonial
+          quote="Our migration to Vitess is more than just a technological upgrade; it's a strategic move to future-proof our database architecture for the next decade and beyond."
+          author="Ryan Sherlock @Intercom"
+        />
         <Features />
       </main>
       <Footer />
