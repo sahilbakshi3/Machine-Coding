@@ -1,0 +1,64 @@
+.logo-section {
+  padding: 40px 0;
+}
+
+.logo-section-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid var(--border);
+}
+
+.logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.logo-cell:hover {
+  background: var(--bg-secondary);
+}
+
+.logo-cell:nth-child(5n) {
+  border-right: none;
+}
+
+.logo-cell:nth-last-child(-n + 5) {
+  border-bottom: none;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-cell:nth-child(5n) {
+    border-right: 1px solid var(--border);
+  }
+  .logo-cell:nth-child(2n) {
+    border-right: none;
+  }
+  .logo-cell:nth-last-child(-n + 5) {
+    border-bottom: 1px solid var(--border);
+  }
+  .logo-cell:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}

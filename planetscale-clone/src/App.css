@@ -1,0 +1,15 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.testimonial-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
