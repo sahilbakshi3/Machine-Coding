@@ -1,0 +1,63 @@
+.logobar {
+  padding: 48px 0;
+  border-top: 1px solid var(--border-muted);
+  border-bottom: 1px solid var(--border-muted);
+  overflow: hidden;
+}
+
+.logobar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.logobar-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.logobar-track-wrap {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.logobar-track {
+  display: flex;
+  gap: 0;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.logobar-item {
+  padding: 0 48px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  border-right: 1px solid var(--border-muted);
+}
+.logobar-item:hover {
+  opacity: 0.8;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
