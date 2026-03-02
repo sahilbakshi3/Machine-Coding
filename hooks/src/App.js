@@ -6,7 +6,7 @@ import React from "react";
 // import RefExample from "./hooks/use-ref/Index";
 // import MemoExample from "./hooks/use-memo/Index";
 // import CallbackExample from "./hooks/use-callback/Index";
-import LayoutEffectExample from "./hooks/use-layout-effect/Index";
+// import LayoutEffectExample from "./hooks/use-layout-effect/Index";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       {/* <RefExample /> */}
       {/* <MemoExample /> */}
       {/* <CallbackExample /> */}
-      <LayoutEffectExample />
+      {/* <LayoutEffectExample /> */}
     </div>
   );
 };
