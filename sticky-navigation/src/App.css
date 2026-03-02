@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 15px;
+  background: #333;
+  color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Sticky state */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 1000;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
