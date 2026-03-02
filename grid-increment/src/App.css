@@ -1,0 +1,22 @@
+.app {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background: #eee;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
