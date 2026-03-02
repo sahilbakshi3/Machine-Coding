@@ -1,12 +1,13 @@
-import React, { useContext, useState } from "react";
+// hooks/src/hooks/use-context/Index.jsx
+import React, { createContext, useContext, useState } from "react";
 
-const GlobalContext = useContext(null);
+const GlobalContext = createContext(null);
 
 export const ContextExample = () => {
   const [isToggle, setIsToggle] = useState(false);
 
   return (
-    <GlobalContext.Provider>
+    <GlobalContext.Provider value={{ isToggle, setIsToggle }}>
       <div>
         <h1>Parent Component</h1>
         <ChildToggle />
@@ -16,7 +17,8 @@ export const ContextExample = () => {
   );
 };
 
-const ChildToggle = ({ setIsToggle }) => {
+const ChildToggle = () => {
+  const { setIsToggle } = useContext(GlobalContext);
   return (
     <div>
       <button onClick={() => setIsToggle((prev) => !prev)}>Toggle State</button>
@@ -24,7 +26,8 @@ const ChildToggle = ({ setIsToggle }) => {
   );
 };
 
-const ChildDisplay = ({ isToggle }) => {
+const ChildDisplay = () => {
+  const { isToggle } = useContext(GlobalContext);
   return (
     <div>
       <p>Current State: {isToggle ? "ON" : "OFF"}</p>
