@@ -70,12 +70,12 @@ export default function PollWidget() {
 //   votes    -> number of votes received
 
 // Example:
-options = [
-  { id: 1, label: "React", votes: 0 },
-  { id: 2, label: "Vue", votes: 0 },
-  { id: 3, label: "Angular", votes: 0 },
-  { id: 4, label: "Svelte", votes: 0 },
-];
+// options = [
+//   { id: 1, label: "React", votes: 0 },
+//   { id: 2, label: "Vue", votes: 0 },
+//   { id: 3, label: "Angular", votes: 0 },
+//   { id: 4, label: "Svelte", votes: 0 },
+// ];
 
 // Core state idea:
 // options array is the source of truth.

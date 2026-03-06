@@ -1,0 +1,28 @@
+.keyboard-container {
+  width: 400px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.keyboard-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+}
